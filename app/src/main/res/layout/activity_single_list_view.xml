@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.SingleListView">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/aslv_listName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="List Name"
+            android:textSize="28sp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/aslv_dateCreated"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:text="25/5/2018"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:textSize="16sp"
+
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/aslv_public"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="public" />
+
+        <TextView
+            android:id="@+id/aslv_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="24dp"
+            android:text="edit" />
+
+        <TextView
+            android:id="@+id/aslv_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="delete"/>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/aslv_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+    </LinearLayout>
+
+</RelativeLayout>

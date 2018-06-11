@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.user_profile">
+
+    <ImageView
+        android:id="@+id/aup_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/back_colour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/aup_userimg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="148dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/aup_back" />
+
+    <TextView
+        android:id="@+id/aup_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="312sp"
+        android:text="Wade Wilson"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ListView
+        android:id="@+id/aup_options"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aup_username" />
+
+    <!--<com.lucasurbas.listitemview.ListItemView
+        android:id="@+id/liv_acc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="222sp"
+        android:paddingEnd="20sp"
+        android:paddingStart="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aup_userimg"
+        app:layout_constraintVertical_bias="0.821"
+        app:liv_title="account settings" />
+
+    <com.lucasurbas.listitemview.ListItemView
+        android:id="@+id/liv_friends"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingEnd="20sp"
+        android:paddingStart="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liv_acc"
+        app:liv_title="friends" />
+
+    <com.lucasurbas.listitemview.ListItemView
+        android:id="@+id/listItemView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingEnd="20sp"
+        android:paddingStart="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/liv_friends"
+        app:liv_title="lists" />
+
+    <com.lucasurbas.listitemview.ListItemView
+        android:id="@+id/listItemView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="78dp"
+        android:paddingEnd="20sp"
+        android:paddingStart="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listItemView3"
+        app:liv_title="likes" />-->
+
+
+</android.support.constraint.ConstraintLayout>

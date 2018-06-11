@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.WelcomeSurvey">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:textSize="22sp"
+            android:text="Ваша стать:"/>
+
+            <RadioGroup
+            android:id="@+id/aws_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/aws_rbfemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:textSize="20sp"
+                android:text="Жіноча"
+                />
+
+            <RadioButton
+                android:id="@+id/aws_rbmale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Чоловіча" />
+            </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:textSize="22sp"
+            android:text="Ваш вік:"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:entries="@array/sp1">
+        </Spinner>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:textSize="22sp"
+            android:text="Ваш сімейний статус:"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:entries="@array/sp2"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:textSize="22sp"
+            android:text="Освіта:"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:entries="@array/sp3"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:textSize="22sp"
+            android:text="Наразі Ви:"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:entries="@array/sp4"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:textSize="22sp"
+            android:text="Як часто ви здійснюєте покупки?"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"
+            android:entries="@array/sp5"/>
+
+        <!--    ІНТЕРЕСИ-->>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_margin="30dp"
+            android:theme="@style/buttons"
+            android:layout_gravity="center"
+            android:text="Зберегти"/>
+    </LinearLayout>
+
+</ScrollView>

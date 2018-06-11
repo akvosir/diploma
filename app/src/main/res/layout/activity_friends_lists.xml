@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".navigation.FriendsLists">
+
+    <ImageView
+        android:id="@+id/afl_back"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="fitStart"
+        android:src="@drawable/back_colour"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/afl_userimg"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="144dp"
+        android:src="@drawable/parker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/afl_back" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/afl_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="270dp"
+            android:layout_marginStart="140dp"
+            android:text="Peter Parker"
+            android:textSize="24sp" />
+        <TextView
+            android:id="@+id/afl_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:text="24 years old"
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/afl_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/afl_userimg"
+            app:layout_constraintVertical_bias="0.4" />
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

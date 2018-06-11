@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.ProductView">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/apv_piframe"
+                android:layout_width="match_parent"
+                android:paddingTop="20dp"
+                android:background="#fff"
+                android:layout_height="380dp"
+
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/apv_productimage"
+                    android:layout_width="351dp"
+                    android:layout_height="380dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/pixel" />
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:id="@+id/rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apv_piframe"
+                android:background="#fff"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:visibility="visible">
+
+                <RatingBar
+                    android:id="@+id/apv_ratingbar"
+                    style="?android:attr/ratingBarStyleIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:isIndicator="false"/>
+
+                <ImageView
+                    android:layout_width="38dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="end"
+                    android:layout_marginStart="10dp"
+                    android:elevation="4dp"
+                    android:src="@drawable/heart" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rating"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/apv_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="15 799 – 24 997 грн"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/apv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:padding="10dp"
+                    android:text="Google Pixel 2 64GB Just Black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/apv_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="Pixel 2 - це друге покоління смартфонів від компанії Google, створених у співпраці з HTC. Пристрій працює під управлінням Android 8 Oreo. Усередині смартфона один з найбільш потужних процесорів 2017 року - Qualcomm Snapdragon 835. Процесор забезпечує оптимальний баланс між часом роботи від акумулятора і продуктивністю в іграх та інших складних завданнях. Дисплей Pixel 2 виконаний за технологією AMOLED, його розмір 5 дюймів, а роздільна здатність - 1920х1080. У продажу є дві версії - 64 і 128 ГБ постійної пам'яті. Об'єм оперативної пам'яті в усіх випадках однаковий - 4 ГБ. Корпус Pixel 2 виконаний з алюмінію і продовжує дизайн першого покоління з невеликими змінами."
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingStart="10dp"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="Характеристики"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/apv_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:padding="16dp"
+                android:layout_below="@id/name"/>
+
+            <LinearLayout
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/apv_recycler"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/apv_addToListBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:theme="@style/buttons"
+                    android:text="ADD TO list"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/apv_compareBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:theme="@style/buttons"
+                    android:text="compare"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

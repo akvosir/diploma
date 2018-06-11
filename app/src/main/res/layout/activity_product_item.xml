@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/api_cv"
+    android:elevation="1dp"
+    tools:context=".views.ProductItem">
+
+    <RelativeLayout
+        android:id="@+id/api_relative"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:paddingStart="2dp"
+        android:paddingEnd="10dp"
+        android:paddingTop="15dp"
+        android:background="#fff"
+        android:gravity="start">
+
+        <ImageView
+            android:id="@+id/api_productImage"
+            android:layout_width="180dp"
+            android:layout_height="160dp"
+            android:background="#fff"
+            android:src="@drawable/pixel"/>
+
+        <TextView
+            android:id="@+id/api_productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/api_productImage"
+            android:maxLength="30"
+            android:text="Google Pixel"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/api_description"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_below="@id/api_productName"
+            android:layout_toEndOf="@id/api_productImage"
+            android:maxLength="150"
+            android:textSize="14sp"
+            android:text="Pixel 2 - це друге покоління смартфонів від компанії Google, створених у співпраці з HTC. Пристрій працює під управлінням Android 8 Oreo. Усередині смартфона один з найбільш потужних процесорів 2017 року - Qualcomm Snapdragon 835. Процесор забезпечує оптимальний баланс між часом роботи від акумулятора і продуктивністю в іграх та інших складних завданнях. Дисплей Pixel 2 виконаний за технологією AMOLED, його розмір 5 дюймів, а роздільна здатність - 1920х1080. У продажу є дві версії - 64 і 128 ГБ постійної пам'яті. Об'єм оперативної пам'яті в усіх випадках однаковий - 4 ГБ. Корпус Pixel 2 виконаний з алюмінію і продовжує дизайн першого покоління з невеликими змінами. "/>
+
+        <TextView
+            android:id="@+id/api_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_below="@id/api_description"
+            android:layout_toEndOf="@id/api_productImage"
+            android:textSize="15sp"
+            android:text="15 799 – 24 997 грн"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
