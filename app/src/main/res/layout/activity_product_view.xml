@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.ProductView">
+    tools:context=".views.products.ProductView">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -53,11 +53,13 @@
                     android:isIndicator="false"/>
 
                 <ImageView
+                    android:id="@+id/apv_like"
                     android:layout_width="38dp"
                     android:layout_height="38dp"
                     android:layout_gravity="end"
                     android:layout_marginStart="10dp"
                     android:elevation="4dp"
+                    android:clickable="true"
                     android:src="@drawable/heart" />
 
             </LinearLayout>

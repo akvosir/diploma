@@ -1,10 +1,12 @@
 package com.example.yuliia.diploma.navigation;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.volley.Request;
@@ -13,9 +15,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.yuliia.diploma.R;
-import com.example.yuliia.diploma.Recyclers.AdapterLists;
 import com.example.yuliia.diploma.models.URLs;
 import com.example.yuliia.diploma.models.WishList;
+import com.example.yuliia.diploma.recyclers.AdapterLists;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -29,10 +31,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class FriendsLists extends AppCompatActivity {
+public class FriendsLists  extends AppCompatActivity {
     private List<WishList> wishListList;
     private RecyclerView afl_rv;
     private Intent intent;
+    private ImageView img;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,10 +52,8 @@ public class FriendsLists extends AppCompatActivity {
         afl_rv.setHasFixedSize(true);
 
         wishListList = new ArrayList<>();
-        AdapterLists adapter = new AdapterLists(wishListList,this);
-        afl_rv.setAdapter(adapter);
-
         loadListsRV();
+
     }
 
     public void loadListsRV() {
@@ -71,11 +72,12 @@ public class FriendsLists extends AppCompatActivity {
                                 String list_name = obj.getString("list_name");
                                 int is_public = obj.getInt("public");
                                 Date date_created = format.parse(obj.getString("date_created"));
-                                WishList wl = new WishList(list_id, user_id, list_name, date_created, is_public);
+                                int count = obj.getInt("count");
+                                WishList wl = new WishList(list_id, user_id, list_name, date_created, is_public, count);
                                 wishListList.add(wl);
                             }
 
-                            AdapterLists adapter = new AdapterLists(wishListList, FriendsLists.this);
+                            AdapterLists adapter = new AdapterLists(wishListList,FriendsLists.this);
                             afl_rv.setAdapter(adapter);
 
                         }catch (JSONException e){

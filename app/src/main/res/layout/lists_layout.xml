@@ -6,28 +6,13 @@
     android:layout_width="match_parent"
     tools:context=".navigation.Navigation">
 
-    <TextView
-        android:id="@+id/ll_tv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:text="my lists"
-        android:textStyle="italic"
-        android:typeface="serif"
-        android:textSize="30sp"
-        />
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/ll_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="20dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_marginTop="15dp" />
 
 </LinearLayout>

@@ -15,11 +15,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.yuliia.diploma.R;
-import com.example.yuliia.diploma.Recyclers.AdapterLists;
 import com.example.yuliia.diploma.models.URLs;
 import com.example.yuliia.diploma.models.WishList;
+import com.example.yuliia.diploma.recyclers.AdapterLists;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -50,10 +49,6 @@ public class ListsFragment extends Fragment {
         ll_rv.setHasFixedSize(true);
 
         wishListList = new ArrayList<>();
-
-        AdapterLists adapter = new AdapterLists(wishListList, getActivity());
-        ll_rv.setAdapter(adapter);
-
         loadListsRV();
         return myView;
     }
@@ -74,13 +69,15 @@ public class ListsFragment extends Fragment {
                                 String list_name = obj.getString("list_name");
                                 int is_public = obj.getInt("public");
                                 Date date_created = format.parse(obj.getString("date_created"));
+                                int itemCount = obj.getInt("count");
 
-                                WishList wl = new WishList(list_id, user_id, list_name, date_created, is_public);
+                                WishList wl = new WishList(list_id, user_id, list_name, date_created, is_public, itemCount);
                                 wishListList.add(wl);
                             }
 
                             AdapterLists adapter = new AdapterLists(wishListList, getActivity());
                             ll_rv.setAdapter(adapter);
+                            adapter.notifyDataSetChanged();
 
                         }catch (JSONException e){
                             e.printStackTrace();

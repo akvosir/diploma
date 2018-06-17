@@ -1,9 +1,12 @@
 package com.example.yuliia.diploma.navigation;
 
+import android.app.ActionBar;
 import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.widget.SearchView;
+import android.view.Gravity;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -16,11 +19,11 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.yuliia.diploma.views.CreatingNewList;
 import com.example.yuliia.diploma.R;
-import com.example.yuliia.diploma.views.WelcomeSurvey;
 import com.example.yuliia.diploma.models.User;
-import com.example.yuliia.diploma.views.LoginActivity;
+import com.example.yuliia.diploma.views.lists.CreatingNewList;
+import com.example.yuliia.diploma.views.user.LoginActivity;
+import com.example.yuliia.diploma.views.user.WelcomeSurvey;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -36,12 +39,15 @@ public class Navigation extends AppCompatActivity
     private FirebaseAuth mAuth;
     private DatabaseReference users;
     private int REQUEST_CODE;
+    private SearchView searchView;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         mAuth = FirebaseAuth.getInstance();
@@ -62,11 +68,21 @@ public class Navigation extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        FragmentManager fragmentManager = getFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.frame_nav, new MainFragment()).commit();
+        fab.hide();
+        getSupportActionBar().setTitle("Search");
+
         FirebaseDatabase fDatabase = FirebaseDatabase.getInstance();
         users = fDatabase.getReference("users");
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        searchView = (SearchView) findViewById(R.id.abn_search);
+        searchView.setLayoutParams(new Toolbar.LayoutParams(Gravity.RIGHT));
+        //TODO handle friends search in recycler
 
         View hView =  navigationView.getHeaderView(0);
         final TextView nav_user = (TextView)hView.findViewById(R.id.nhn_user_name);
@@ -137,18 +153,22 @@ public class Navigation extends AppCompatActivity
             fragmentManager.beginTransaction()
                     .replace(R.id.frame_nav, new MainFragment()).commit();
             fab.hide();
+            getSupportActionBar().setTitle("Search");
         } else if (id == R.id.nav_friends) {
             fragmentManager.beginTransaction()
                     .replace(R.id.frame_nav, new FriendsFragment()).commit();
             fab.hide();
+            getSupportActionBar().setTitle("Friends");
         } else if (id == R.id.nav_lists) {
             fragmentManager.beginTransaction()
                     .replace(R.id.frame_nav, new ListsFragment()).commit();
             fab.show();
+            getSupportActionBar().setTitle("Lists");
         }else if (id == R.id.nav_settings) {
             fragmentManager.beginTransaction()
                     .replace(R.id.frame_nav, new WelcomeSurvey()).commit();
             fab.hide();
+            getSupportActionBar().setTitle("Survey");
         }else if (id == R.id.nav_logout) {
             mAuth.signOut();
             Intent intent = new Intent(this, LoginActivity.class);

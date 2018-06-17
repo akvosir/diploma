@@ -1,4 +1,4 @@
-package com.example.yuliia.diploma.views;
+package com.example.yuliia.diploma.views.lists;
 
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -31,8 +31,8 @@ import java.util.Date;
 import java.util.List;
 
 public class CreatingNewList extends AppCompatActivity {
-    EditText edListName;
-    RadioGroup rgPublic;
+    private EditText edListName;
+    private RadioGroup rgPublic;
     private FirebaseAuth mAuth;
     int value;
 

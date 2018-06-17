@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".bottom_sheet">
+    tools:context=".views.products.bottom_sheet">
 
     <TextView
         android:id="@+id/abs_text"
@@ -23,9 +23,7 @@
         android:id="@+id/abs_rv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:layout_margin="10dp">
-
+        android:padding="12dp">
     </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

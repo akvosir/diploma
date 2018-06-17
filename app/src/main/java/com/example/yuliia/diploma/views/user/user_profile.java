@@ -1,4 +1,4 @@
-package com.example.yuliia.diploma.views;
+package com.example.yuliia.diploma.views.user;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -33,7 +33,7 @@ public class user_profile extends AppCompatActivity {
         setContentView(R.layout.activity_user_profile);
 
         list_options = (ListView) findViewById(R.id.aup_options);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.lists_layout, R.id.ll_tv, options);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, R.layout.lists_layout, options);
         list_options.setAdapter(arrayAdapter);
 
         list_options.setClickable(true);

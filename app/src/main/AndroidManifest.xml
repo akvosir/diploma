@@ -19,28 +19,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".views.LoginActivity" />
-        <activity android:name=".views.user_profile" />
+        <activity android:name=".views.user.LoginActivity" />
+        <activity android:name=".views.user.user_profile" />
         <activity
             android:name=".navigation.Navigation"
             android:theme="@style/AppTheme" />
         <activity android:name=".navigation.ListLayoutSingle" />
         <activity android:name=".navigation.FriendsLayoutSingle" />
         <activity android:name=".navigation.FriendsLists" />
-        <activity android:name=".views.SingleListView" />
-        <activity android:name=".views.ItemLayout" />
-        <activity android:name=".views.ItemLayoutEdit" />
-        <activity android:name=".views.SearchinLayout" />
-        <activity android:name=".views.ProductItem" />
-        <activity android:name=".views.Registration" />
-        <activity android:name=".views.ItemsLayout" />
-        <activity android:name=".views.ItemLayoutSingle" />
+        <activity android:name=".views.lists.SingleListView" />
+        <activity android:name=".views.lists.ItemLayout" />
+        <activity android:name=".views.lists.ItemLayoutEdit" />
+        <activity android:name=".views.products.ProductItem" />
+        <activity android:name=".views.user.Registration" />
+        <activity android:name=".views.lists.ItemsLayout" />
+        <activity android:name=".views.lists.ItemLayoutSingle" />
         <activity android:name=".views.CreatingNewList" />
-        <activity android:name=".views.AddingNewItem" />
-        <activity android:name=".views.ProductView" />
-        <activity android:name=".views.CharList" />
-        <activity android:name=".views.WelcomeSurvey" />
-        <activity android:name=".bottom_sheet"></activity>
+        <activity android:name=".views.lists.AddingNewItem" />
+        <activity android:name=".views.products.ProductView" />
+        <activity android:name=".views.products.CharList" />
+        <activity android:name=".views.lists.ListLAyoutSingleSmall" />
+        <activity android:name=".views.products.Comparing" />
+        <activity android:name=".recyclers.comparing_recycler" />
+        <activity android:name=".views.user.survey_single" />
+        <activity android:name=".views.lists.EditList"></activity>
     </application>
 
 </manifest>

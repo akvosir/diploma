@@ -4,6 +4,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
 
+    <string name="app_name">Splash</string>
 
     <string name="title_activity_item_view">ItemView</string>
     <string name="title_activity_list_view_activity">list_view_activity</string>
@@ -17,17 +18,7 @@
     <string name="action_settings">Settings</string>
     <string name="ml_search">searching screen</string>
 
-    <string name="facebook_app_id">302665186933857</string>
-    <string name="fb_login_protocol_scheme">fb302665186933857</string>
-
-    <string-array name="sp1">
-        <item>до 16</item>
-        <item>16 "en dash" 25</item>
-        <item>26 "en dash" 35</item>
-        <item>36 "en dash" 45</item>
-        <item>46 "en dash" 60</item>
-        <item>від 61</item>
-    </string-array>
+    <string name="alls_item"> items</string>
 
     <string-array name="sp2">
         <item>Самотній</item>
@@ -37,32 +28,4 @@
         <item>Separated</item>
     </string-array>
 
-    <string-array name="sp3">
-        <item>Неповна середня</item>
-        <item>Середня</item>
-        <item>Неповна вища</item>
-        <item>Бакалаврат</item>
-        <item>Магістратура</item>
-    </string-array>
-
-    <string-array name="sp4">
-        <item>Працюю, повна зайнятість</item>
-        <item>Працюю, неповна зайнятість</item>
-        <item>Вчусь, не працюю</item>
-        <item>Вчусь, працюю</item>
-        <item>Приватний підприємець</item>
-        <item>Не працюю</item>
-        <item>Пенсіонер</item>
-    </string-array>
-
-    <string-array name="sp5">
-        <item>Щодня</item>
-        <item>Кожні кілька днів</item>
-        <item>Один раз на тиждень</item>
-        <item>Один раз на кілька тижнів</item>
-        <item>Один раз на місяць</item>
-        <item>Кілька разів на місяць</item>
-        <item>Раз у кілька місяців</item>
-        <item>По святах</item>
-    </string-array>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.yuliia.diploma.Recyclers;
+package com.example.yuliia.diploma.recyclers;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.yuliia.diploma.views.ItemLayout;
 import com.example.yuliia.diploma.R;
 import com.example.yuliia.diploma.models.ListItem;
+import com.example.yuliia.diploma.views.lists.ItemLayout;
 
 import java.util.List;
 
@@ -34,7 +34,9 @@ public class AdapterRecyclerItems extends RecyclerView.Adapter<AdapterRecyclerIt
     public void onBindViewHolder(AdapterRecyclerItems.ListViewHolder holder, int position) {
         final ListItem listItem = itemList.get(position);
         holder.mItemName.setText(listItem.getItemName());
-        //holder.mDateAdded.setText(listItem.getDateAdded());
+        String date = String.valueOf(listItem.getDateAdded());
+
+        holder.mDateAdded.setText(date);
         holder.mCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

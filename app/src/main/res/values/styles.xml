@@ -6,12 +6,21 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-
+        <item name="android:popupMenuStyle">@style/PopupMenu</item>
     </style>
 
     <style name="buttons" parent="ThemeOverlay.AppCompat.Dark">
         <item name="colorControlHighlight"></item>
         <item name="colorButtonNormal">@color/colorPrimary</item>
+    </style>
+
+    <style name="PopupMenuListView" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:divider">@android:color/black</item>
+        <item name="android:dividerHeight">2dp</item>
+    </style>
+
+    <style name="PopupMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="android:popupBackground">@android:color/white</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

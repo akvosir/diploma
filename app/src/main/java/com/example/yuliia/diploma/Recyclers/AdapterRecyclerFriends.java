@@ -1,5 +1,6 @@
-package com.example.yuliia.diploma.Recyclers;
+package com.example.yuliia.diploma.recyclers;
 
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;

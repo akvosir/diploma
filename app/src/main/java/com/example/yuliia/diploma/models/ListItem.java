@@ -57,7 +57,6 @@ public class ListItem {
     public String getDateAdded() {
         DateFormat format = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
         return format.format(DateAdded);
-        //return DateAdded;
     }
 
     public void setDateAdded(Date dateAdded) {

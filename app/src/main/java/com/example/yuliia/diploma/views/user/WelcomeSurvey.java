@@ -1,4 +1,4 @@
-package com.example.yuliia.diploma.views;
+package com.example.yuliia.diploma.views.user;
 
 import android.app.Fragment;
 import android.support.annotation.Nullable;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.yuliia.diploma.R;
 
-public class WelcomeSurvey extends Fragment {
+public class WelcomeSurvey extends Fragment{
 
     @Nullable
     @Override

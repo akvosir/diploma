@@ -8,6 +8,8 @@ public class Product {
     private String productDescription;
     private String productImg;
 
+    public Product(){}
+
     public Product(int productId, String productName, int productPriceLow, int productPriceHigh, String productDescription, String productImg) {
         this.productId = productId;
         this.productName = productName;

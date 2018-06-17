@@ -8,10 +8,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.example.yuliia.diploma.R;
-import com.example.yuliia.diploma.views.SearchinLayout;
+import com.example.yuliia.diploma.views.products.SearchinLayout;
 
 public class MainFragment extends Fragment {
 

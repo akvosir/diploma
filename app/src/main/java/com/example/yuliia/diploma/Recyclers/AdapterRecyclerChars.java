@@ -1,4 +1,4 @@
-package com.example.yuliia.diploma.Recyclers;
+package com.example.yuliia.diploma.recyclers;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;

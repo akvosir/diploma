@@ -1,4 +1,4 @@
-package com.example.yuliia.diploma.views;
+package com.example.yuliia.diploma.views.lists;
 
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
@@ -15,7 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.yuliia.diploma.R;
-import com.example.yuliia.diploma.Recyclers.AdapterRecyclerItems;
+import com.example.yuliia.diploma.recyclers.AdapterRecyclerItems;
 import com.example.yuliia.diploma.models.ListItem;
 import com.example.yuliia.diploma.models.URLs;
 
@@ -64,6 +64,7 @@ public class ItemsLayout extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         adapter.notifyDataSetChanged();
         loadItemsRV();
     }

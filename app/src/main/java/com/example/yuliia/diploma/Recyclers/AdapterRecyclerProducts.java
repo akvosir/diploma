@@ -1,4 +1,4 @@
-package com.example.yuliia.diploma.Recyclers;
+package com.example.yuliia.diploma.recyclers;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,9 +11,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.yuliia.diploma.views.ProductView;
 import com.example.yuliia.diploma.R;
 import com.example.yuliia.diploma.models.Product;
+import com.example.yuliia.diploma.views.products.ProductView;
 
 import java.util.List;
 

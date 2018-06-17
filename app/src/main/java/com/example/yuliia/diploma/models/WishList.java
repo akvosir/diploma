@@ -8,6 +8,7 @@ public class WishList {
     private String ListName;
     private Date DateCreated;
     private int IsPrivate;
+    private int ItemCount;
 
     public WishList(int listId, String userId, String listName, Date dateCreated, int isPrivate) {
         this.ListId = listId;
@@ -15,6 +16,15 @@ public class WishList {
         this.ListName = listName;
         this.DateCreated = dateCreated;
         this.IsPrivate = isPrivate;
+    }
+
+    public WishList(int listId, String userId, String listName, Date dateCreated, int isPrivate, int ItemCount) {
+        this.ListId = listId;
+        this.UserId = userId;
+        this.ListName = listName;
+        this.DateCreated = dateCreated;
+        this.IsPrivate = isPrivate;
+        this.ItemCount = ItemCount;
     }
 
     public int getListId() {
@@ -55,5 +65,13 @@ public class WishList {
 
     public void setPrivate(int aPrivate) {
         IsPrivate = aPrivate;
+    }
+
+    public int getItemCount() {
+        return ItemCount;
+    }
+
+    public void setItemCount(int itemCount) {
+        ItemCount = itemCount;
     }
 }

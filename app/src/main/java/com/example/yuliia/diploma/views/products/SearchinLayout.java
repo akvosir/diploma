@@ -1,10 +1,8 @@
-package com.example.yuliia.diploma.views;
+package com.example.yuliia.diploma.views.products;
 
 import android.app.Fragment;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -17,7 +15,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.yuliia.diploma.R;
-import com.example.yuliia.diploma.Recyclers.AdapterRecyclerProducts;
+import com.example.yuliia.diploma.recyclers.AdapterRecyclerProducts;
 import com.example.yuliia.diploma.models.Product;
 import com.example.yuliia.diploma.models.URLs;
 
@@ -28,7 +26,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SearchinLayout extends Fragment {
+public class SearchinLayout extends Fragment{
     private List<Product> productList;
     RecyclerView recyclerView;
 

@@ -1,4 +1,4 @@
-package com.example.yuliia.diploma.views;
+package com.example.yuliia.diploma.views.lists;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +32,7 @@ public class ItemLayout extends AppCompatActivity {
         setContentView(R.layout.activity_item_layout);
 
         final Intent intent = getIntent();
+        final String item_id = intent.getStringExtra("com.example.yuliia.diploma.item_id");
 
         Button editBtn = (Button) findViewById(R.id.ail_edit);
         final RequestQueue queue = Volley.newRequestQueue(this);
@@ -39,7 +40,8 @@ public class ItemLayout extends AppCompatActivity {
         editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), AddingNewItem.class);
+                Intent intent = new Intent(ItemLayout.this, ItemLayoutEdit.class);
+                intent.putExtra("com.example.yuliia.diploma.item_id_edit", item_id);
                 startActivity(intent);
             }
         });
@@ -76,7 +78,6 @@ public class ItemLayout extends AppCompatActivity {
         //final TextView product_link = (TextView) findViewById(R.id.ail_productLink);
         final TextView product_note = (TextView) findViewById(R.id.ail_productNote);
 
-        //loadItem()
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URLs.selectItem + intent.getStringExtra("com.example.yuliia.diploma.item_id"),
                 new Response.Listener<String>() {
                     @Override
@@ -89,7 +90,7 @@ public class ItemLayout extends AppCompatActivity {
 
                                 product_name.setText(obj.getString("item_name"));
                                 product_date.setText(obj.getString("date_added"));
-                                //get item picture
+                                // TODO get item picture
                                 //product_link.setText(obj.getString("item_name"));
                                 product_note.setText(obj.getString("item_note"));
 

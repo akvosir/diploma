@@ -1,4 +1,4 @@
-package com.example.yuliia.diploma.views;
+package com.example.yuliia.diploma.views.lists;
 
 import android.content.Intent;
 import android.os.AsyncTask;
@@ -48,6 +48,11 @@ public class AddingNewItem extends AppCompatActivity {
         itemName = (TextInputEditText) findViewById(R.id.aani_productName);
         productLink = (TextInputEditText) findViewById(R.id.aani_productLink);
         productNote = (TextInputEditText) findViewById(R.id.aani_productNote);
+        productDate = findViewById(R.id.aani_productAdded);
+
+        //TODO UPLOAD IMAGE
+
+        productDate.setText(dateFormat.format(date));
 
         Button btnSave = (Button) findViewById(R.id.aani_saveBtn);
         btnSave.setOnClickListener(new View.OnClickListener() {
@@ -63,8 +68,6 @@ public class AddingNewItem extends AppCompatActivity {
             public void onClick(View v) {
                 finish();            }
         });
-
-
 
     }
 

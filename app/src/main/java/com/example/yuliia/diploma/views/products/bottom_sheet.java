@@ -1,6 +1,5 @@
-package com.example.yuliia.diploma;
+package com.example.yuliia.diploma.views.products;
 
-import android.animation.LayoutTransition;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomSheetDialogFragment;
@@ -17,9 +16,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.yuliia.diploma.Recyclers.AdapterLists;
+import com.example.yuliia.diploma.R;
 import com.example.yuliia.diploma.models.URLs;
 import com.example.yuliia.diploma.models.WishList;
+import com.example.yuliia.diploma.recyclers.AdapterBottomSheet;
 import com.google.firebase.auth.FirebaseAuth;
 
 import org.json.JSONArray;
@@ -54,10 +54,6 @@ public class bottom_sheet extends BottomSheetDialogFragment {
         abs_rv.setHasFixedSize(true);
 
         wishListList = new ArrayList<>();
-
-        AdapterLists adapter = new AdapterLists(wishListList, getActivity());
-        abs_rv.setAdapter(adapter);
-
         loadListsRV();
 
         return v;
@@ -101,7 +97,7 @@ public class bottom_sheet extends BottomSheetDialogFragment {
                                 wishListList.add(wl);
                             }
 
-                            AdapterLists adapter = new AdapterLists(wishListList, getActivity());
+                            AdapterBottomSheet adapter = new AdapterBottomSheet(wishListList, getActivity());
                             abs_rv.setAdapter(adapter);
 
                         }catch (JSONException e){

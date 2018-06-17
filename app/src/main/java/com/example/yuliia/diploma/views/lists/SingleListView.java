@@ -1,4 +1,4 @@
-package com.example.yuliia.diploma.views;
+package com.example.yuliia.diploma.views.lists;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

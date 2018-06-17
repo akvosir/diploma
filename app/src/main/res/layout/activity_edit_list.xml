@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".views.lists.EditList">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="60dp"
+        android:text="editing a list"
+        android:textSize="26sp"
+        android:textStyle="italic"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/ael_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="10dp"
+        android:text="added on"
+        android:textSize="18sp"
+        android:typeface="serif" />
+
+    <EditText
+        android:id="@+id/ael_listName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:inputType="text"
+        android:hint="enter list name"
+        android:labelFor="@+id/acnl_listName"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:text="should your friends see it?"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:typeface="serif" />
+
+    <RadioGroup
+        android:id="@+id/ael_radioPublic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/ael_radioButtonPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="public"
+            />
+
+
+        <RadioButton
+            android:id="@+id/ael_radioButtonNotPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="not public" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/ael_buttonSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="40dp"
+        android:theme="@style/buttons"
+        android:text="Save" />
+
+    <Button
+        android:id="@+id/ael_buttonCancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginTop="10dp"
+        android:theme="@style/buttons"
+        android:text="Cancel" />
+
+</LinearLayout>
